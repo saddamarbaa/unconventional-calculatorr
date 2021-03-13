@@ -22,5 +22,14 @@ const subtract = () => {
   createAndWriteOutput("-", initialResult, entredNumber);
 };
 
+const multiply = () => {
+  const entredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult * entredNumber;
+  createAndWriteOutput("*", initialResult, entredNumber);
+};
+
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
+
+multiplyBtn.addEventListener("click", multiply);
