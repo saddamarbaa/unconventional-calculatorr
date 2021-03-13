@@ -29,7 +29,14 @@ const multiply = () => {
   createAndWriteOutput("*", initialResult, entredNumber);
 };
 
+const divid = () => {
+  const entredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult / entredNumber;
+  createAndWriteOutput("/", initialResult, entredNumber);
+};
+
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
-
 multiplyBtn.addEventListener("click", multiply);
+divideBtn.addEventListener("click", divid);
