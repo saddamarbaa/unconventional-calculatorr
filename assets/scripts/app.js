@@ -1,15 +1,18 @@
 const defaultResult = 0;
+let currentResult = defaultResult;
 
-let currentResult = defaultEesult;
-currentResult = ((currentResult + 10) * 3) / 2 - 1;
+const getUserNumberInput = () => parseInt(userInput.value);
 
-function add(num1, num2) {
-  const result = num1 + num2;
-  alert("the result is : ", result);
-}
+const createAndWriteOutput = (operator, resultBeforeCalc, calcNumber) => {
+  const calcDescription = `${resultBeforeCalc}  ${operator}  ${calcNumber}`;
+  outputResult(currentResult, calcDescription);
+};
 
-currentResult = add(1, 2);
+const add = () => {
+  const entredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult + entredNumber;
+  createAndWriteOutput("+", initialResult, entredNumber);
+};
 
-let calculationDescription = `(${defaultResult} + + 10) * 3/2-1`;
-
-console.log(defaultEesult);
+addBtn.addEventListener("click", add);
