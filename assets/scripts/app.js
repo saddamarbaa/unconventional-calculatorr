@@ -15,4 +15,12 @@ const add = () => {
   createAndWriteOutput("+", initialResult, entredNumber);
 };
 
+const subtract = () => {
+  const entredNumber = getUserNumberInput();
+  const initialResult = currentResult;
+  currentResult = currentResult - entredNumber;
+  createAndWriteOutput("-", initialResult, entredNumber);
+};
+
 addBtn.addEventListener("click", add);
+subtractBtn.addEventListener("click", subtract);
